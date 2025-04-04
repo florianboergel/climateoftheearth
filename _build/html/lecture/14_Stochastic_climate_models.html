@@ -1,0 +1,780 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Stochastic climate models &#8212; Climate of the Earth</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=c5ced968eda925caa686" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=c5ced968eda925caa686"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'lecture/14_Stochastic_climate_models';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Auto-covariance function" href="15_Auto-covariance_function.html" />
+    <link rel="prev" title="Time series analysis - basic definitions and examples" href="13_Time_series_analysis.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Climate of the Earth</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    Lecture overview
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Climate dynamics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="01_Introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_Fundamental_process_of_the_climate_system.html">Fundamental processes of the climate system</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_Large_scale_atmospheric_and_ocean_circulation.html">Large-scale atmosphere and ocean circulations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_Buoyancy-driven_circulation.html">Buoyancy-driven circulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07_Climate_models.html">Climate models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08_Forced_and_unforced_climate_variability.html">Forced and unforced climate variability</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Climate statistics</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="09_Probability_basics.html">Probability basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_Probability_density_and_distribution.html">Probability density and distribution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11_Covariance_matrix.html">Covariance Matrix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_Estimation_of_statistical_parameters.html">Estimation of statistical parameters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="13_Time_series_analysis.html">Time series analysis - basic definitions and examples</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Stochastic climate models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="15_Auto-covariance_function.html">Auto-covariance function</a></li>
+<li class="toctree-l1"><a class="reference internal" href="16_Spectrum.html">Spectrum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="17_Cross-covariance_function.html">Cross-covariance function</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Exercise</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../exercise/00_introduction_to_python.html">Lecture 1, Introduction to python</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../exercise/01_energy-model.html">Lecture 2, A “zero-dimensional” energy balance model of Earth’s climate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exercise/02_non-linear-dynamics.html">Lecture 3, Nonlinear dynamics, stability and bifurcations</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../exercise/03_ice-albedo.html">Lecture 4, Snowball Earth, the ice-albedo feedback, and multiple equilibria</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../exercise/04_advection-diffusion.html">Lecture 5, Evolution in time and space</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Homework</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../homework/climate-of-the-earth-h1.html">Exercise 1, policy goals under uncertainty</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../homework/climate-of-the-earth-h2.html">Exercise 2, melting the snowball earth</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../homework/climate-of-the-earth-h3.html">Exercise 3, analyzing the Baltic Sea</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Additional material</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../additional/06_rednoise.html">Red noise</a></li>
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/git/https%3A//git.io-warnemuende.de/iow-lectures/climateoftheearth/main?urlpath=tree/lecture/14_Stochastic_climate_models.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/iow-lectures/climateoftheearth/blob/main/lecture/14_Stochastic_climate_models.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+<a href="https://git.io-warnemuende.de/iow-lectures/climateoftheearth/issues/new?title=Issue%20on%20page%20%2Flecture/14_Stochastic_climate_models.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button"
+   title="Open an issue"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/lecture/14_Stochastic_climate_models.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Stochastic climate models</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pdf-of-some-stochastic-processes">Pdf of some stochastic processes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-damping-model">1. Linear damping model</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#asymmetric-feedback-model">2. Asymmetric feedback model</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#non-linear-damping-model">3. Non-linear damping model</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#non-linear-model">4. Non-linear model</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#autoregressive-markov-processes">Autoregressive (Markov) processes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ar-1-processes">AR(1)-processes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ar-2-processes">AR(2)-processes</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div style="background-color: #f0f0f0; border: 1px solid #ccc; padding: 10px; color: black;">
+    <strong>Climate of the Earth system</strong>
+    <p> Prof. Dr. Markus Meier <br>
+    Leibniz Institute for Baltic Sea Research Warnemünde (IOW) <br>
+    E-Mail: markus.meier@io-warnemuende.de </p>
+</div><section class="tex2jax_ignore mathjax_ignore" id="stochastic-climate-models">
+<h1>Stochastic climate models<a class="headerlink" href="#stochastic-climate-models" title="Permalink to this heading">#</a></h1>
+<ul class="simple">
+<li><p>physical dynamical equation:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\frac{dX(t)}{dt} = A(X(t),Y_i(t))\]</div>
+<ul class="simple">
+<li><p>evolution in time is still unknown due to</p>
+<ol class="arabic simple">
+<li><p>not exactly known initial state (demonstrated by the Lorenz model): deterministic chaos</p></li>
+<li><p>unknown time derivative (demonstrated by the Lorenz model)</p></li>
+<li><p>unknown physical processes A</p></li>
+</ol>
+</li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\frac{dX(t)}{dt} = f_m(t) * A(X(t),Y_i(t)) + f_a(t)\]</div>
+<p><span class="math notranslate nohighlight">\(A\)</span>: slow dynamics<br />
+<span class="math notranslate nohighlight">\(f_m, f_a\)</span>: fast dynamics, multiplicative, additive white noise</p>
+<ul class="simple">
+<li><p>deterministic chaos: start with certain initial state and compute time evolution. now start from the same initial state with add small perturbation added - first similar time evolution but after some time the two paths diverge and develop totally different.</p></li>
+<li><p>a white noise process is an uncorrelated time series of normally distributed random values, noise can generate low-frequency variability in X (Hasselmann, 1976), not only introduced by the external forcing (solar radiation, volcanoes)</p></li>
+</ul>
+<section id="pdf-of-some-stochastic-processes">
+<h2>Pdf of some stochastic processes<a class="headerlink" href="#pdf-of-some-stochastic-processes" title="Permalink to this heading">#</a></h2>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/L14_1_allpdf.PNG"><img alt="../_images/L14_1_allpdf.PNG" src="../_images/L14_1_allpdf.PNG" style="width: 85%;" /></a>
+</figure>
+<section id="linear-damping-model">
+<h3>1. Linear damping model<a class="headerlink" href="#linear-damping-model" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>pdf is a normal distribution</p></li>
+<li><p>potential and pdf shown in left column of Fig. 1</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\frac{dX}{dt} = -c*X+f,~~~~~c&gt;0\]</div>
+<ul class="simple">
+<li><p>example: slab ocean model for the sea surface temperature (SST). change in SST for a constant height <span class="math notranslate nohighlight">\(h\)</span> depends on the atmospheric forcing:</p></li>
+</ul>
+<div class="math notranslate nohighlight" id="equation-eq4">
+<span class="eqno">(29)<a class="headerlink" href="#equation-eq4" title="Permalink to this equation">#</a></span>\[\frac{dSST}{dt} = \frac{1}{c_ph}F_{atmos}, ~~~~~ c_p=4*10^6\frac{J}{Km^3},\]</div>
+<ul class="simple">
+<li><p>while the atmospheric forcing is linearly dependent of the SST itself:</p></li>
+</ul>
+<div class="math notranslate nohighlight" id="equation-eq5">
+<span class="eqno">(30)<a class="headerlink" href="#equation-eq5" title="Permalink to this equation">#</a></span>\[F_{atmos}=c_A(T_{atmos}-SST), ~~~~~ c_A=40\frac{W}{Km^2}\]</div>
+<ul class="simple">
+<li><p>inserting <span class="xref myst"></span> into <span class="xref myst"></span> yields:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\frac{dSST}{dt} = -cSST+cT_{atmos},~~~~~\mathrm{with}~c=\frac{c_A}{c_ph}\]</div>
+<ul class="simple">
+<li><p>the time evolution of the SST is in the SST itself if the atmospheric temperature <span class="math notranslate nohighlight">\(T_{atmos}\)</span> is white noise. this is called an AR(1)-process (more about AR-processes later in this lecture)</p></li>
+</ul>
+</section>
+<section id="asymmetric-feedback-model">
+<h3>2. Asymmetric feedback model<a class="headerlink" href="#asymmetric-feedback-model" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>pdf is skewed</p></li>
+<li><p>potential and pdf shown in second to left column of Fig. 1</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\frac{dX}{dt} = c_0 - c_1X-c_2X^2+f,~~~~~c_i&gt;0\]</div>
+<ul class="simple">
+<li><p>if the damping is stronger for deviations to the larger side of the equilibrium state than for deviations to the lower side, the pdf will be positively skewed and deviations to smaller values are more likey than deviations to larger values</p></li>
+<li><p>Fig. 2 shows the pdf of some exemplary advection variables</p></li>
+</ul>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/L14_2_advection.PNG"><img alt="../_images/L14_2_advection.PNG" src="../_images/L14_2_advection.PNG" style="width: 40%;" /></a>
+</figure>
+<ul class="simple">
+<li><p>Fig. 3 shows the pdf of NINO3 temperatures</p></li>
+</ul>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/L14_3_elnino.PNG"><img alt="../_images/L14_3_elnino.PNG" src="../_images/L14_3_elnino.PNG" style="width: 25%;" /></a>
+</figure>
+</section>
+<section id="non-linear-damping-model">
+<h3>3. Non-linear damping model<a class="headerlink" href="#non-linear-damping-model" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>pdf with kurtosis</p></li>
+<li><p>potential and pdf shown in second to right column of Fig. 1</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\frac{dX}{dt} = -cX^3+f,~~~~~c&gt;0\]</div>
+<ul class="simple">
+<li><p>non-linear but symmetrical damping, negative kurtosis causes a pdf which is less peaked than the Gaussian distribution</p></li>
+</ul>
+</section>
+<section id="non-linear-model">
+<h3>4. Non-linear model<a class="headerlink" href="#non-linear-model" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>pdf is bimodal</p></li>
+<li><p>potential and pdf shown in right column of Fig. 1</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\frac{dX}{dt} =c_1X-c_3X^3+f,~~~~~c_i&gt;0\]</div>
+<ul class="simple">
+<li><p>two equilibria caused by deterministic cycles (daily, annual), pdf of a sine function is bimodal</p></li>
+</ul>
+</section>
+</section>
+<section id="autoregressive-markov-processes">
+<h2>Autoregressive (Markov) processes<a class="headerlink" href="#autoregressive-markov-processes" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>dynamics of many physical processes can be approximated by first-, second-, or sometimes higher-order ordinary linear differential equations:</p></li>
+</ul>
+<div class="math notranslate nohighlight" id="equation-ar">
+<span class="eqno">(31)<a class="headerlink" href="#equation-ar" title="Permalink to this equation">#</a></span>\[a_2\frac{d^2x(t)}{dt^2} + a_1 \frac{dx(t)}{dt} + a_0x(t) = z(t)\]</div>
+<ul class="simple">
+<li><p>with <span class="math notranslate nohighlight">\(z(t)\)</span> deribing the external forcing. if the external forcing <span class="math notranslate nohighlight">\(z(t)\)</span> is a white noise process, then equation <span class="xref myst"></span> defines an auto-regressive process of the second order, short AR(2)-process</p></li>
+<li><p>time discretization for numerical implementation:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[x_t=\alpha_1x_{t-1}+\alpha_2x_{t-2}+\xi_t\]</div>
+<ul class="simple">
+<li><p>with the prefactors <span class="math notranslate nohighlight">\(\alpha_1=\frac{a_1+2a_2}{a_0+a_1+a_2}\)</span>, <span class="math notranslate nohighlight">\(\alpha_2=\frac{-a_2}{a_0+a_1+a_2}\)</span> and <span class="math notranslate nohighlight">\(\xi_t=\frac{1}{a_0+a_1+a_2}z_t\)</span></p></li>
+<li><p>in general: <span class="math notranslate nohighlight">\(\mathbf{X_t}:t \in \mathbb{Z}\)</span> is an auto-regressive process of order p if there exists real constants <span class="math notranslate nohighlight">\(\alpha_k~(k=0,1,...,p)\)</span> with <span class="math notranslate nohighlight">\(\alpha_k\)</span> not equal to 0 and a white noise process <span class="math notranslate nohighlight">\(\mathbf{Z_t}:t\in\mathbb{Z}\)</span> such that:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\mathbf{X_t} = \alpha_0 + \sum_{k=1}^p\alpha_k\mathbf{X_{t-k}}+\mathbf{Z_t}\]</div>
+<ul class="simple">
+<li><p>analytically an AR(p)-process is described by:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[a_0x(t) + \sum_{k=1}^p a_k\frac{d}{dt^k}x(t) = z(t)\]</div>
+<ul class="simple">
+<li><p>we assume <span class="math notranslate nohighlight">\(\mu=0 \Rightarrow \alpha_0=0\)</span>. variance of AR(p)-processes is given by:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[Var(\mathbf{X_t}) = \frac{Var(\mathbf{Z_t})}{1- \sum_{k=1}^p\alpha_k\rho_k},\]</div>
+<ul class="simple">
+<li><p>with <span class="math notranslate nohighlight">\(\rho_k\)</span> the auto-correlation function of <span class="math notranslate nohighlight">\(\mathbf{X_t}\)</span>:</p></li>
+</ul>
+<div class="math notranslate nohighlight" id="equation-rho">
+<span class="eqno">(32)<a class="headerlink" href="#equation-rho" title="Permalink to this equation">#</a></span>\[\rho_k = \frac{Covar(\mathbf{X_{t-k}X_t})}{Var(\mathbf{X_t})}\]</div>
+<section id="ar-1-processes">
+<h3>AR(1)-processes<a class="headerlink" href="#ar-1-processes" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>AR(1)-processes can be described by:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\mathbf{X_t} = \alpha_1 \mathbf{X_{t-1}} + \mathbf{z_t},~~~~~\alpha_1 \in ]0,1[\]</div>
+<ul class="simple">
+<li><p>with a variance of</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[Var(\mathbf{X_t}) = \frac{\sigma_z^2}{1-\alpha_1^2}\]</div>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\rho_1 = \alpha_1\)</span> lag(1) auto-correlation</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\frac{dx(t)}{dt} = a_1x(t)+z(t),\]</div>
+<ul class="simple">
+<li><p>with the damping parameter</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[a_1 = \frac{\alpha_1-1}{\alpha_1}\]</div>
+<ul class="simple">
+<li><p>noise generates low-frequency variability</p></li>
+</ul>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/L14_4_AR1.PNG"><img alt="../_images/L14_4_AR1.PNG" src="../_images/L14_4_AR1.PNG" style="width: 40%;" /></a>
+</figure>
+</section>
+<section id="ar-2-processes">
+<h3>AR(2)-processes<a class="headerlink" href="#ar-2-processes" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>AR(1)-processes can be described by:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\mathbf{X_t} = \alpha_1 \mathbf{X_{t-1}} + \alpha_2 \mathbf{X_{t-2}} + \mathbf{z_t}\]</div>
+<ul class="simple">
+<li><p>stationary:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+\alpha_2 + \alpha_1 &amp;&lt; 1\\
+\alpha_2 - \alpha_1 &amp;&lt; 1\\
+|\alpha_2| &amp;&lt; 1\\
+\end{align*}\end{split}\]</div>
+<ul class="simple">
+<li><p>AR(2)-process:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\alpha_2 \neq \alpha_1^2\]</div>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\alpha_2\)</span> can only show oscillatory behavior if <span class="math notranslate nohighlight">\(\alpha_2&lt;0\)</span></p></li>
+</ul>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/L14_5_AR2.PNG"><img alt="../_images/L14_5_AR2.PNG" src="../_images/L14_5_AR2.PNG" style="width: 40%;" /></a>
+</figure>
+<ul class="simple">
+<li><p>damped oscillating system, which can, unlike the AR(1)-process, have a preferred time scale at which the system oscillates if driven white noise, e.g. El Nino Southern Oscillation</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./lecture"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="13_Time_series_analysis.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Time series analysis - basic definitions and examples</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="15_Auto-covariance_function.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Auto-covariance function</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pdf-of-some-stochastic-processes">Pdf of some stochastic processes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#linear-damping-model">1. Linear damping model</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#asymmetric-feedback-model">2. Asymmetric feedback model</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#non-linear-damping-model">3. Non-linear damping model</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#non-linear-model">4. Non-linear model</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#autoregressive-markov-processes">Autoregressive (Markov) processes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ar-1-processes">AR(1)-processes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ar-2-processes">AR(2)-processes</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By H. E. Markus Meier, Florian Börgel, Sven Karsten, Georg Sebastian Völker
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=c5ced968eda925caa686"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

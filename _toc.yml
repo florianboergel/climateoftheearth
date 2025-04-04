@@ -1,0 +1,46 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: index
+parts:
+  - caption: Climate dynamics
+    chapters:
+    - file: lecture/01_Introduction.ipynb
+    - file: lecture/02_Fundamental_process_of_the_climate_system.ipynb
+    - file: lecture/03_Large_scale_atmospheric_and_ocean_circulation.ipynb
+    - file: lecture/06_Buoyancy-driven_circulation.ipynb
+    - file: lecture/07_Climate_models.ipynb
+    - file: lecture/08_Forced_and_unforced_climate_variability.ipynb
+  - caption: Climate statistics
+    chapters:
+    - file: lecture/09_Probability_basics.ipynb
+    - file: lecture/10_Probability_density_and_distribution.ipynb
+    - file: lecture/11_Covariance_matrix.ipynb
+    - file: lecture/12_Estimation_of_statistical_parameters.ipynb
+    - file: lecture/13_Time_series_analysis.ipynb
+    - file: lecture/14_Stochastic_climate_models.ipynb
+    - file: lecture/15_Auto-covariance_function.ipynb
+    - file: lecture/16_Spectrum.ipynb
+    - file: lecture/17_Cross-covariance_function.ipynb
+  - caption: Exercise
+    chapters:
+    - file: exercise/00_introduction_to_python
+    - file: exercise/01_energy-model
+    - file: exercise/02_non-linear-dynamics
+    - file: exercise/03_ice-albedo
+    - file: exercise/04_advection-diffusion
+    - file: exercise/05_heat-transport
+    - file: exercise/06_eofs.ipynb
+    - file: exercise/07_wavelet.ipynb
+  - caption: Homework
+    chapters:
+    - file: homework/climate-of-the-earth-h1
+    - file: homework/climate-of-the-earth-h2
+    - file: homework/climate-of-the-earth-h3
+  - caption: Additional material
+    chapters:
+    - file: additional/06_rednoise
+  - caption: Project work
+    chapters:
+    - file: projects_files/projects.md

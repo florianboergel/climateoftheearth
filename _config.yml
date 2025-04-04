@@ -1,0 +1,47 @@
+# Book settings
+# Learn more at https://jupyterbook.org/customize/config.html
+
+title: Climate of the Earth
+author: H. E. Markus Meier, Florian Börgel, Sven Karsten, Georg Sebastian Völker
+
+# Force re-execution of notebooks on each build.
+# See https://jupyterbook.org/content/execute.html
+execute:
+  execute_notebooks: "off"
+
+sphinx:
+  recursive_update: true
+  config:
+    html_theme_options:
+      repository_provider: custom   
+      repository_url: https://git.io-warnemuende.de/iow-lectures/climateoftheearth.git
+  extra_extensions:
+    - sphinx_proof
+
+only_build_toc_files: true
+
+# Define the name of the latex output file for PDF builds
+latex:
+  latex_documents:
+    targetname: book.tex
+
+# Add a bibtex file so that we can create citations
+bibtex_bibfiles:
+  - references.bib
+
+repository:
+  url: https://git.io-warnemuende.de/iow-lectures/climateoftheearth.git
+  branch: main
+  path_to_book: ""
+  type: git  # Explicitly state it's a git repository
+
+launch_buttons:
+  binderhub_url: "https://mybinder.org" 
+  colab_url: "https://colab.research.google.com"
+  notebook_interface: "jupyterlab"  # Optional: specify the interface
+
+# Add GitHub buttons to your book
+# See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
+html:
+  use_issues_button: true
+  use_repository_button: false

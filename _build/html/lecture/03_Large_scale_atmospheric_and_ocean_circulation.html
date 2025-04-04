@@ -1,0 +1,787 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Large-scale atmosphere and ocean circulations &#8212; Climate of the Earth</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=c5ced968eda925caa686" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=c5ced968eda925caa686"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'lecture/03_Large_scale_atmospheric_and_ocean_circulation';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Buoyancy-driven circulation" href="06_Buoyancy-driven_circulation.html" />
+    <link rel="prev" title="Fundamental processes of the climate system" href="02_Fundamental_process_of_the_climate_system.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Climate of the Earth</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    Lecture overview
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Climate dynamics</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="01_Introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_Fundamental_process_of_the_climate_system.html">Fundamental processes of the climate system</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Large-scale atmosphere and ocean circulations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_Buoyancy-driven_circulation.html">Buoyancy-driven circulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07_Climate_models.html">Climate models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08_Forced_and_unforced_climate_variability.html">Forced and unforced climate variability</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Climate statistics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="09_Probability_basics.html">Probability basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_Probability_density_and_distribution.html">Probability density and distribution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11_Covariance_matrix.html">Covariance Matrix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_Estimation_of_statistical_parameters.html">Estimation of statistical parameters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="13_Time_series_analysis.html">Time series analysis - basic definitions and examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14_Stochastic_climate_models.html">Stochastic climate models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="15_Auto-covariance_function.html">Auto-covariance function</a></li>
+<li class="toctree-l1"><a class="reference internal" href="16_Spectrum.html">Spectrum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="17_Cross-covariance_function.html">Cross-covariance function</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Exercise</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../exercise/00_introduction_to_python.html">Lecture 1, Introduction to python</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../exercise/01_energy-model.html">Lecture 2, A “zero-dimensional” energy balance model of Earth’s climate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exercise/02_non-linear-dynamics.html">Lecture 3, Nonlinear dynamics, stability and bifurcations</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../exercise/03_ice-albedo.html">Lecture 4, Snowball Earth, the ice-albedo feedback, and multiple equilibria</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../exercise/04_advection-diffusion.html">Lecture 5, Evolution in time and space</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Homework</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../homework/climate-of-the-earth-h1.html">Exercise 1, policy goals under uncertainty</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../homework/climate-of-the-earth-h2.html">Exercise 2, melting the snowball earth</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../homework/climate-of-the-earth-h3.html">Exercise 3, analyzing the Baltic Sea</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Additional material</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../additional/06_rednoise.html">Red noise</a></li>
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/git/https%3A//git.io-warnemuende.de/iow-lectures/climateoftheearth/main?urlpath=tree/lecture/03_Large_scale_atmospheric_and_ocean_circulation.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/iow-lectures/climateoftheearth/blob/main/lecture/03_Large_scale_atmospheric_and_ocean_circulation.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+<a href="https://git.io-warnemuende.de/iow-lectures/climateoftheearth/issues/new?title=Issue%20on%20page%20%2Flecture/03_Large_scale_atmospheric_and_ocean_circulation.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button"
+   title="Open an issue"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/lecture/03_Large_scale_atmospheric_and_ocean_circulation.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Large-scale atmosphere and ocean circulations</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basics">Basics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#atmospheric-circulation">Atmospheric circulation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ocean-circulation">Ocean circulation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#general">General</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#global-conveyor-belt">Global conveyor belt</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deep-water-formation">Deep water formation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#coastal-up-and-downwelling">Coastal up- and downwelling</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-ocean-s-overall-role-in-climate">The ocean’s overall role in climate</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-figures">Table of figures</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div style="background-color: #f0f0f0; border: 1px solid #ccc; padding: 10px; color: black;">
+    <strong>Climate of the Earth system</strong>
+    <p> Prof. Dr. Markus Meier <br>
+    Leibniz Institute for Baltic Sea Research Warnemünde (IOW) <br>
+    E-Mail: markus.meier@io-warnemuende.de </p>
+</div><section class="tex2jax_ignore mathjax_ignore" id="large-scale-atmosphere-and-ocean-circulations">
+<h1>Large-scale atmosphere and ocean circulations<a class="headerlink" href="#large-scale-atmosphere-and-ocean-circulations" title="Permalink to this heading">#</a></h1>
+<ol class="arabic simple">
+<li><p>Basics</p></li>
+<li><p>Atmospheric circulation</p></li>
+<li><p>Oceanic circulation</p></li>
+</ol>
+<section id="basics">
+<h2>Basics<a class="headerlink" href="#basics" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>in previous lecture we investigated radiation balance of the Earth with incoming solar radiation and outgoing thermal radiation. we know that insolation is way stronger at the equator than at higher latitudes, also outgoing radiation not constant over latitude:</p></li>
+</ul>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/L3_1_radiation_latitudes.png"><img alt="../_images/L3_1_radiation_latitudes.png" src="../_images/L3_1_radiation_latitudes.png" style="width: 40%;" /></a>
+</figure>
+<ul class="simple">
+<li><p>can resolve this as map plot over latitude and longitude to get a full spatial picture of the absorbed and emitted radiation</p></li>
+</ul>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/L3_2_radiations.png"><img alt="../_images/L3_2_radiations.png" src="../_images/L3_2_radiations.png" style="width: 80%;" /></a>
+</figure>
+<ul class="simple">
+<li><p>net energy gain at low ad energy loss at high latitudes. this imbalance leads energy transport in form of heat from the equator to the poles in the atmosphere and the ocean. these two mediums have very different characteristics:</p>
+<ul>
+<li><p><strong>compressibility:</strong> water is incompressible liquid (density doesn’t depend much on pressure) and air is an ideal gas that is very well compressible (pV=nkT)</p></li>
+<li><p><strong>density:</strong> water is 1000 times denser than air, atmospheric density only temperature dependent, ocean density temperature and salinity dependent</p></li>
+<li><p><strong>heat capacity:</strong> water has 4 times larger heat capacity than air</p></li>
+<li><p><strong>forcing:</strong> Oceans are forced from the top, atmosphere from below. this has implications for mixing; also ocean currents are mostly forced by atmospheric winds, atmospheric winds are initiated by temperature contrast</p></li>
+<li><p><strong>spatiality:</strong> atmoshpere has no boundaries while the oceans have lateral boundaries with small gateways between the 3 major basins (e.g. Indonesia through flow, Drake passage)</p></li>
+<li><p><strong>latent heating:</strong> (=energy transferred in a process without change of the body’s temperature, for example, in a phase change), not happening in oceans, atmospheric circulation is driven by latent heating by water phase transitions (e.g. liquid to water vapour and vice versa) to some part</p></li>
+<li><p><strong>salinity:</strong> affects density profile of the oceans. no salt in atmosphere</p></li>
+<li><p><strong>sea ice:</strong> oceans have floating sea ice affecting air-sea exchange of heat, water vapour and momentum</p></li>
+</ul>
+</li>
+<li><p>weather systems tranpsort energy via heat and momentum, atmospheric weather systems have to be way larger than oceanic ones to store similar amount of energy:</p></li>
+</ul>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/L3_3_weather_systems.png"><img alt="../_images/L3_3_weather_systems.png" src="../_images/L3_3_weather_systems.png" style="width: 50%;" /></a>
+</figure>
+<ul class="simple">
+<li><p>talk a bit about gulf stream</p></li>
+</ul>
+</section>
+<section id="atmospheric-circulation">
+<h2>Atmospheric circulation<a class="headerlink" href="#atmospheric-circulation" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>live global surface winds: <a class="reference external" href="https://earth.nullschool.net">https://earth.nullschool.net</a></p></li>
+</ul>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/L3_4_atmos1.png"><img alt="../_images/L3_4_atmos1.png" src="../_images/L3_4_atmos1.png" style="width: 30%;" /></a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/L3_5_atmos2.png"><img alt="../_images/L3_5_atmos2.png" src="../_images/L3_5_atmos2.png" style="width: 40%;" /></a>
+</figure>
+<ul class="simple">
+<li><p>Hadley cell subtropic, very north polar cell, in between ferrel-cell (only exists in some kind of mean to communicate between the other two); these cells characterize northern and southern atmosphere</p></li>
+<li><p>Air rising at equator, then to 30°N at the height, then falling down and so on</p></li>
+<li><p>Coriolis force deflects transported particles due to earths rotation and causes passat-winds, which explain earth’s wind bands which are important because they force the oceans</p></li>
+<li><p>Diversion and conversion at 30°/60°N</p></li>
+<li><p>Jets are amplified: winds have to increase with height (thermal wind) -&gt; come back later</p></li>
+</ul>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/L3_6_NAO.png"><img alt="../_images/L3_6_NAO.png" src="../_images/L3_6_NAO.png" style="width: 50%;" /></a>
+</figure>
+<ul class="simple">
+<li><p>In atmosphere we have cells and different patterns of variability described by quasistationary high or low pressure systems, ie Nao very relevant for northern europe weather in winter</p></li>
+<li><p>NAO: quasistationary pressure systems Icelandic Low and Azores High, explains a lot of the variane in Northern European weather in winter.</p></li>
+</ul>
+</section>
+<section id="ocean-circulation">
+<h2>Ocean circulation<a class="headerlink" href="#ocean-circulation" title="Permalink to this heading">#</a></h2>
+<section id="general">
+<h3>General<a class="headerlink" href="#general" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>2/3 of world’s surface is oceans. ocean has charcteristic temperature profile. most of it is very cold and only close to the surface it gets warmer, especially for lower latitudes.</p></li>
+<li><p>Thermocline in tropics not in higher latitudes, very deep ocean below 1000-3000km is rather homogenous with only small gradient.</p></li>
+</ul>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/L3_7_tcrosssection.PNG"><img alt="../_images/L3_7_tcrosssection.PNG" src="../_images/L3_7_tcrosssection.PNG" style="width: 50%;" /></a>
+</figure>
+<ul class="simple">
+<li><p>Characteristic of ocean not only temperature but also salinity -&gt; densitiy depends on them</p></li>
+<li><p>Salinity higher due to evaporation in some latitudes but also dependent on freshwater supply (rivers, ice melting)</p></li>
+<li><p>But temperature main driver of density</p></li>
+</ul>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/L3_8_ocean_profiles.png"><img alt="../_images/L3_8_ocean_profiles.png" src="../_images/L3_8_ocean_profiles.png" style="width: 80%;" /></a>
+</figure>
+<ul class="simple">
+<li><p>Wind driven surface circulation: clock/anticlockwise depending on hemisphere -&gt; corioslis force deflects to right in North and to left in South</p></li>
+<li><p>Gyers are natural consequences of momentum equations (can/will calculate/show later). Gyers are in each basins</p></li>
+</ul>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/L3_9_winddrivencirc.png"><img alt="../_images/L3_9_winddrivencirc.png" src="../_images/L3_9_winddrivencirc.png" style="width: 40%;" /></a>
+</figure>
+</section>
+<section id="global-conveyor-belt">
+<h3>Global conveyor belt<a class="headerlink" href="#global-conveyor-belt" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>idealized global oceanic currents, system of currents that transports water around the world.</p></li>
+</ul>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/L3_10_conveyorbelt.png"><img alt="../_images/L3_10_conveyorbelt.png" src="../_images/L3_10_conveyorbelt.png" style="width: 60%;" /></a>
+</figure>
+</section>
+<section id="deep-water-formation">
+<h3>Deep water formation<a class="headerlink" href="#deep-water-formation" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>sinking of water masses, that only takes place in a few areas around the oceans. associated with vertical mixing via convection</p></li>
+<li><p>AMOC: -Nadw north atlantic deep water heavy but even heavier aabw antarctic bottom water, we can distinguish even more water masses, figur is idolized, Cold water can take up more nutrients and co2 in dissolved forms -&gt; different to warmer water in tropical regions</p></li>
+</ul>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/L3_11_amoc.png"><img alt="../_images/L3_11_amoc.png" src="../_images/L3_11_amoc.png" style="width: 40%;" /></a>
+</figure>
+<ul class="simple">
+<li><p>different meridional circulation directions in Atlantic and Pacific Ocean. in Atlantic warm surface water flowing northward transporting energy and after it gives away its heat is falls down to form North Atalntic deepwater. in Pacific circulation the other way around, cold deep water rising in Northern latitudes, absorbing heat from the atmosphere and flow back at the top. why?</p></li>
+<li><p>find the two circulations in global conveyor belt, Figure 10, is in accordance</p></li>
+<li><p>this has tremendous effect on surrounding land masses ie antarctica, is reason for different climates in northern europe/america at same latitudes (no deep water formation in pacific)</p></li>
+</ul>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/L3_13_ocean_circulations.png"><img alt="../_images/L3_13_ocean_circulations.png" src="../_images/L3_13_ocean_circulations.png" style="width: 70%;" /></a>
+</figure>
+<ul class="simple">
+<li><p>U- cubash: antartic sea ice from the left: wind (cold) breaks up pieces of sea ice (polynya) which gives space for heat flux from ocean thereby a lot of heat extraction from the ocean. Also ocean is touched by cold atmospheric air so there is more sea ice formation (ice salinty ca 4g/kg). much less salt in ice than in ocean -&gt; rejected salt is sinking down and results in heaviest water you can form, falls down into antarctic bottom water</p></li>
+</ul>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/L3_12_arctic.png"><img alt="../_images/L3_12_arctic.png" src="../_images/L3_12_arctic.png" style="width: 40%;" /></a>
+</figure>
+<ul class="simple">
+<li><p>summarizing the places where deep-water formation is happening, only very few (see Figure 14): Greenland Sea, Labrador Sea, Weddell Sea, Ross Sea</p></li>
+<li><p>main causes of deep water formation: buoyancy, cooling, sea ice formation</p></li>
+</ul>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/L3_14_deepwater.png"><img alt="../_images/L3_14_deepwater.png" src="../_images/L3_14_deepwater.png" style="width: 50%;" /></a>
+</figure>
+</section>
+<section id="coastal-up-and-downwelling">
+<h3>Coastal up- and downwelling<a class="headerlink" href="#coastal-up-and-downwelling" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>wind can suck water from the deep or push it down: wind blowing parallel to the coast forces surface water in the same direction. due to coriolis force this movement gets deflected to the right on the N. H. and left on the S. H. - this process is also called Ekamn transport. now water is incompressible and due to continuity if surface water gets pushed away from coast water from deeper down has to rise at the coast: upwelling. if surface water gets pushed to the coast it has to sink down due to continuity, no other place to go: downwelling.</p></li>
+</ul>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/L3_15_updownwelling.png"><img alt="../_images/L3_15_updownwelling.png" src="../_images/L3_15_updownwelling.png" style="width: 60%;" /></a>
+</figure>
+<ul class="simple">
+<li><p>depending on coastal geography and direction of the wind. some coasts are prone for up- or downwelling. figure 16 shows upwelling prone regions.</p></li>
+</ul>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/L3_16_global_updown.png"><img alt="../_images/L3_16_global_updown.png" src="../_images/L3_16_global_updown.png" style="width: 40%;" /></a>
+</figure>
+<ul class="simple">
+<li><p>in Baltic sea predominant upwelling regions are the south and east coast of sweden beacause of westerlies, usually downwelling system in west of Baltic Sea</p></li>
+</ul>
+</section>
+<section id="the-ocean-s-overall-role-in-climate">
+<h3>The ocean’s overall role in climate<a class="headerlink" href="#the-ocean-s-overall-role-in-climate" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>The world ocean plays a crucial role in our climate system. It moderates climate in time (diurnally and annually) and redistributes heat spatially in the large-scale ocean circulation. Furthermore its albedo is lower than that of sea ice and it influences the distribution of water vapor which acts as the strongest greenhouse gas.</p></li>
+<li><p>Atmospheric heat transport is characterized by the Hadley Cell for low latitudes and weather systems and the Ferrell cell for mid latitudes.</p></li>
+</ul>
+<p>Example I</p>
+<ul class="simple">
+<li><p>A comparison of the annual temperature profiles of San Francisco (west coast) and New York (east coast) showcases the ocean’s strong influence on local climate, see Fig. 17. Both cities are located at latitudes around 40°N where strong easterly winds dominate the atmospheric circulation. These winds expose New York to the continental climate of Central Northern America resulting in a strong seasonal temperature cycle. On the other side of the continent San Franciscos climate follows the eastward transported oceanic climate. Because of the high heat capacity of water, temperature changes are way smaller which flattens San Franciscos seasonal temperature cycle significantly.</p></li>
+</ul>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/L3_17_coastal.png"><img alt="../_images/L3_17_coastal.png" src="../_images/L3_17_coastal.png" style="width: 40%;" /></a>
+</figure>
+<p>Example II</p>
+<ul class="simple">
+<li><p>As previously discussed, the global conveyor belt (Fig. 10) transports warm and cold water masses along the world ocean. One way of quantifying the circulation is to look at the meridional heat transport as shown in Fig. 17 and 18. Note that northward transport is characterized with a positive sign. Whilte the atmosphere generally transports more energy, the oceanic transport is actually stronger for latitudes up to 10°S and °N. The heat is transported poleward on both Hemispheres with a maximum between 30-40°S and °N respectively. Fig. 18, right decomposes the total oceanic heat transport into the transports along the three main oceanic basins of the Atlantic, Pacific and Indian Ocean. Note the different signs of the heat transport in the Southern Hemisphere.</p></li>
+</ul>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/L3_18_meridional.PNG"><img alt="../_images/L3_18_meridional.PNG" src="../_images/L3_18_meridional.PNG" style="width: 40%;" /></a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/L3_19_meridional_ocean.png"><img alt="../_images/L3_19_meridional_ocean.png" src="../_images/L3_19_meridional_ocean.png" style="width: 60%;" /></a>
+</figure>
+<p>Example III:</p>
+<ul class="simple">
+<li><p>Not only does the ocean redistribute energy through the climate system, it also emits and absorbs radiation resulting in heat flux into or out of the climate system, as shown in Fig. 20. While most of the ocean absorbs heat in form of solar radiation, some coastal currents actually emit a large amount of heat radiation.</p></li>
+</ul>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/L3_20_netflux.PNG"><img alt="../_images/L3_20_netflux.PNG" src="../_images/L3_20_netflux.PNG" style="width: 50%;" /></a>
+</figure>
+</section>
+</section>
+<section id="table-of-figures">
+<h2>Table of figures<a class="headerlink" href="#table-of-figures" title="Permalink to this heading">#</a></h2>
+<p>Figure 1: Copyright M. Pidwirny, 2006. <a class="reference external" href="http://www.physicalgeography.net">www.physicalgeography.net</a><br />
+Figure 2: Courtesy: E. Kjellström<br />
+Figure 3: Figure 3.62 in the lecture notes of Dietmar Dommenget: An Introduction to Climate Dynamics, <a class="reference external" href="https://users.monash.edu.au/~dietmard/teaching/dommenget.climate.dynamics.lecture.notes.pdf">https://users.monash.edu.au/~dietmard/teaching/dommenget.climate.dynamics.lecture.notes.pdf</a><br />
+Figure 4: Copyright UCAR Center for Science Education. <a class="reference external" href="https://scied.ucar.edu/learning-zone/how-weather-works/global-air-atmospheric-circulation">https://scied.ucar.edu/learning-zone/how-weather-works/global-air-atmospheric-circulation</a><br />
+Figure 5: Copyright S. Leyva. <a class="reference external" href="https://geophile.net/Lessons/atmosphere/atm_circulation_04.html">https://geophile.net/Lessons/atmosphere/atm_circulation_04.html</a><br />
+Figure 6: Copyright R. Lindsey and L. Dahlmann, 2009, Climate Variability: North Atlantic Oscillation. <a class="reference external" href="https://www.climate.gov/news-features/understanding-climate/climate-variability-north-atlantic-oscillation">https://www.climate.gov/news-features/understanding-climate/climate-variability-north-atlantic-oscillation</a><br />
+Figure 7: Figure 3.45 in the lecture notes of Dietmar Dommenget: An Introduction to Climate Dynamics, <a class="reference external" href="https://users.monash.edu.au/~dietmard/teaching/dommenget.climate.dynamics.lecture.notes.pdf">https://users.monash.edu.au/~dietmard/teaching/dommenget.climate.dynamics.lecture.notes.pdf</a><br />
+Figure 8: Figure 3.48 in the lecture notes of Dietmar Dommenget: An Introduction to Climate Dynamics, <a class="reference external" href="https://users.monash.edu.au/~dietmard/teaching/dommenget.climate.dynamics.lecture.notes.pdf">https://users.monash.edu.au/~dietmard/teaching/dommenget.climate.dynamics.lecture.notes.pdf</a><br />
+Figure 9: <a class="reference external" href="https://www.coastalwiki.org/wiki/File:Ocean-Currents_gkplanet.jpg">https://www.coastalwiki.org/wiki/File:Ocean-Currents_gkplanet.jpg</a>, access on 29.02.2024<br />
+Figure 10: Left: Copyright: National Geographic Society, 2023. <a class="reference external" href="https://education.nationalgeographic.org/resource/global-conveyor-belt/">https://education.nationalgeographic.org/resource/global-conveyor-belt/</a>, Right: Copyright: Seaice portal, <a class="reference external" href="https://www.meereisportal.de/en/learn-more/sea-ice-physics/sea-ice-and-ocean">https://www.meereisportal.de/en/learn-more/sea-ice-physics/sea-ice-and-ocean</a>, access on 01.03.2024<br />
+Figure 11: Copyright: K. Zalzal, 2018, <a class="reference external" href="https://www.earthmagazine.org/article/disrupting-deep-ocean-warming-reaches-abyss/">https://www.earthmagazine.org/article/disrupting-deep-ocean-warming-reaches-abyss/</a><br />
+Figure 12: <a class="reference external" href="https://www.hamburger-bildungsserver.de">https://www.hamburger-bildungsserver.de</a><br />
+Figure 13: Copyright: K. Zalzal, 2018, <a class="reference external" href="https://www.earthmagazine.org/article/disrupting-deep-ocean-warming-reaches-abyss/">https://www.earthmagazine.org/article/disrupting-deep-ocean-warming-reaches-abyss/</a><br />
+Figure 14: S. Rahmstorf. Thermohaline Circulation. Reference Module in Earth Systems and Environmental Sciences, Elsevier, 2015. <a class="reference external" href="https://doi.org/10.1016/B978-0-12-409548-9.09514-2">https://doi.org/10.1016/B978-0-12-409548-9.09514-2</a><br />
+Figure 15: Figure 3.52 in the lecture notes of Dietmar Dommenget: An Introduction to Climate Dynamics, <a class="reference external" href="https://users.monash.edu.au/~dietmard/teaching/dommenget.climate.dynamics.lecture.notes.pdf">https://users.monash.edu.au/~dietmard/teaching/dommenget.climate.dynamics.lecture.notes.pdf</a><br />
+Figure 16: Figure 3.55 in the lecture notes of Dietmar Dommenget: An Introduction to Climate Dynamics, <a class="reference external" href="https://users.monash.edu.au/~dietmard/teaching/dommenget.climate.dynamics.lecture.notes.pdf">https://users.monash.edu.au/~dietmard/teaching/dommenget.climate.dynamics.lecture.notes.pdf</a><br />
+Figure 18: Figure 4 in Yang, Haijun &amp; Li, Qing &amp; Wang, Kun &amp; Sun, Yu &amp; Sun, Daoxun. (2015). Decomposing the meridional heat transport in the climate system. Climate Dynamics. 44. 2751-2768. <a class="reference external" href="https://doi.org/10.1007/s00382-014-2380-5">https://doi.org/10.1007/s00382-014-2380-5</a>.<br />
+Figure 19: Figure 5.3 in Trenberth, Kevin E. &amp; Stepaniak David P.. (2004). The flow of energy through the Earth’s climate system. Quarterly Journal of the Royal Meteorological Society. Vol. 130, Issue 603. 2677-2701.
+<a class="reference external" href="https://doi.org/10.1256/qj.04.83">https://doi.org/10.1256/qj.04.83</a><br />
+Figure 20: Figure 6.118 in the lecture notes of Dietmar Dommenget: An Introduction to Climate Dynamics, <a class="reference external" href="https://users.monash.edu.au/~dietmard/teaching/dommenget.climate.dynamics.lecture.notes.pdf">https://users.monash.edu.au/~dietmard/teaching/dommenget.climate.dynamics.lecture.notes.pdf</a></p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./lecture"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="02_Fundamental_process_of_the_climate_system.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Fundamental processes of the climate system</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="06_Buoyancy-driven_circulation.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Buoyancy-driven circulation</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basics">Basics</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#atmospheric-circulation">Atmospheric circulation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ocean-circulation">Ocean circulation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#general">General</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#global-conveyor-belt">Global conveyor belt</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deep-water-formation">Deep water formation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#coastal-up-and-downwelling">Coastal up- and downwelling</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-ocean-s-overall-role-in-climate">The ocean’s overall role in climate</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-figures">Table of figures</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By H. E. Markus Meier, Florian Börgel, Sven Karsten, Georg Sebastian Völker
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=c5ced968eda925caa686"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

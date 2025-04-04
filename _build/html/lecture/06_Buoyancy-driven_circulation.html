@@ -1,0 +1,741 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Buoyancy-driven circulation &#8212; Climate of the Earth</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=c5ced968eda925caa686" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=c5ced968eda925caa686"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'lecture/06_Buoyancy-driven_circulation';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Climate models" href="07_Climate_models.html" />
+    <link rel="prev" title="Large-scale atmosphere and ocean circulations" href="03_Large_scale_atmospheric_and_ocean_circulation.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Climate of the Earth</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    Lecture overview
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Climate dynamics</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="01_Introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_Fundamental_process_of_the_climate_system.html">Fundamental processes of the climate system</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_Large_scale_atmospheric_and_ocean_circulation.html">Large-scale atmosphere and ocean circulations</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Buoyancy-driven circulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07_Climate_models.html">Climate models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08_Forced_and_unforced_climate_variability.html">Forced and unforced climate variability</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Climate statistics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="09_Probability_basics.html">Probability basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_Probability_density_and_distribution.html">Probability density and distribution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11_Covariance_matrix.html">Covariance Matrix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_Estimation_of_statistical_parameters.html">Estimation of statistical parameters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="13_Time_series_analysis.html">Time series analysis - basic definitions and examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14_Stochastic_climate_models.html">Stochastic climate models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="15_Auto-covariance_function.html">Auto-covariance function</a></li>
+<li class="toctree-l1"><a class="reference internal" href="16_Spectrum.html">Spectrum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="17_Cross-covariance_function.html">Cross-covariance function</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Exercise</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../exercise/00_introduction_to_python.html">Lecture 1, Introduction to python</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../exercise/01_energy-model.html">Lecture 2, A “zero-dimensional” energy balance model of Earth’s climate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exercise/02_non-linear-dynamics.html">Lecture 3, Nonlinear dynamics, stability and bifurcations</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../exercise/03_ice-albedo.html">Lecture 4, Snowball Earth, the ice-albedo feedback, and multiple equilibria</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../exercise/04_advection-diffusion.html">Lecture 5, Evolution in time and space</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Homework</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../homework/climate-of-the-earth-h1.html">Exercise 1, policy goals under uncertainty</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../homework/climate-of-the-earth-h2.html">Exercise 2, melting the snowball earth</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../homework/climate-of-the-earth-h3.html">Exercise 3, analyzing the Baltic Sea</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Additional material</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../additional/06_rednoise.html">Red noise</a></li>
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/git/https%3A//git.io-warnemuende.de/iow-lectures/climateoftheearth/main?urlpath=tree/lecture/06_Buoyancy-driven_circulation.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/iow-lectures/climateoftheearth/blob/main/lecture/06_Buoyancy-driven_circulation.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+<a href="https://git.io-warnemuende.de/iow-lectures/climateoftheearth/issues/new?title=Issue%20on%20page%20%2Flecture/06_Buoyancy-driven_circulation.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button"
+   title="Open an issue"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/lecture/06_Buoyancy-driven_circulation.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Buoyancy-driven circulation</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-makes-the-ocean-circulate-in-the-way-it-does">What makes the ocean circulate in the way it does?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-atlantic-meridional-overturning-circulation-amoc">The Atlantic Meridional Overturning Circulation (AMOC)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stommel-s-two-box-model">Stommel’s two-box model</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-figures">Table of figures</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div style="background-color: #f0f0f0; border: 1px solid #ccc; padding: 10px; color: black;">
+    <strong>Climate of the Earth system</strong>
+    <p> Prof. Dr. Markus Meier <br>
+    Leibniz Institute for Baltic Sea Research Warnemünde (IOW) <br>
+    E-Mail: markus.meier@io-warnemuende.de </p>
+</div><section class="tex2jax_ignore mathjax_ignore" id="buoyancy-driven-circulation">
+<h1>Buoyancy-driven circulation<a class="headerlink" href="#buoyancy-driven-circulation" title="Permalink to this heading">#</a></h1>
+<section id="what-makes-the-ocean-circulate-in-the-way-it-does">
+<h2>What makes the ocean circulate in the way it does?<a class="headerlink" href="#what-makes-the-ocean-circulate-in-the-way-it-does" title="Permalink to this heading">#</a></h2>
+<p>Some numbers around the ocean:</p>
+<ul class="simple">
+<li><p>Ocean covers <span class="math notranslate nohighlight">\(\mathrm{70\%}\)</span> of Earth’s surface</p></li>
+<li><p><span class="math notranslate nohighlight">\(\mathrm{57\%}\)</span> of the oceans are in the Southern Hemisphere (consists of <span class="math notranslate nohighlight">\(\mathrm{80\%}\)</span> ocean)</p></li>
+<li><p>Average depth of <span class="math notranslate nohighlight">\(\mathrm{3.7km}\)</span></p></li>
+<li><p>Volume of the world ocean is <span class="math notranslate nohighlight">\(\mathrm{1.3*10^{18}m^3}\)</span> (density of sea water around <span class="math notranslate nohighlight">\(\mathrm{1.03*10^{3}\frac{kg}{m^3}}\)</span></p></li>
+<li><p>Total mass of the ocean: <span class="math notranslate nohighlight">\(\mathrm{1.4*10^{21}kg}\)</span>, compared to the mass of the atmosphere: <span class="math notranslate nohighlight">\(\mathrm{5*10^{18}kg}\)</span></p></li>
+<li><p>Specific heat of sea water <span class="math notranslate nohighlight">\(\mathrm{4.180\frac{J}{kgK}}\)</span> resulting in an overall heat capacity of the ocean which is 1000 that of the atmosphere -&gt; ocean’s moderating effect on climate</p></li>
+</ul>
+<p>Transports in the ocean:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\mathrm{1Sv = 10^6 \frac{m^3}{s}}\)</span></p></li>
+<li><p>Antarctic Circumpolar Current (ACC) transporting <span class="math notranslate nohighlight">\(\mathrm{120Sv}\)</span>, in some places up to <span class="math notranslate nohighlight">\(\mathrm{150Sv}\)</span></p></li>
+<li><p>Gulf Stream carries <span class="math notranslate nohighlight">\(\mathrm{30Sv}\)</span> off the coast of Florida, and <span class="math notranslate nohighlight">\(\mathrm{150Sv}\)</span> at Cape Hatteras in North Carolina</p></li>
+<li><p>Amazon river carries <span class="math notranslate nohighlight">\(\mathrm{0.2Sv}\)</span></p></li>
+<li><p>All the world’s rivers into the ocean: <span class="math notranslate nohighlight">\(\mathrm{1Sv}\)</span></p></li>
+<li><p>Westerly winds in the atmosphere carry up to <span class="math notranslate nohighlight">\(\mathrm{500Sv}\)</span></p></li>
+</ul>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/L6_1_circulations.png"><img alt="../_images/L6_1_circulations.png" src="../_images/L6_1_circulations.png" style="width: 70%;" /></a>
+</figure>
+<ul class="simple">
+<li><p>main drivers of ocean circulation are surface winds &amp; buoyancy effects:</p>
+<ol class="arabic simple">
+<li><p>zonal winds force gyers. gyer rotation directions indicate the impact of the surface winds as they agree with the zonal wind directions -&gt; compare Fig. 1 (left) with Fig. 2 (left). wind also plays a role for the interhemispheric meridional overturning ciculation (MOC) through upwelling: strong westerly winds in the Antarctic Circumpolar Current (ACC) can draw water up from the deep and induce interhemispheric circulation, which is particularly strong for the Atlantic.</p></li>
+<li><p>buoyancy effects include temperature and salinity gradients. mixing brings solar heat down to the abyss at low latitudes, which may then rise through the thermocline, maintaining a circulation of sinking at high latitudes and rising at low latitudes, enabling a MOC to be maintained. salinity forcing is mainly of oppsite direction since salinity decreases with altitude due to decreasing evaporation and increasing freshwater input through precipitation and river runoff. in our current climate state the temperature effects are dominant.
+<em>Courtesy: G. Vallis</em></p></li>
+</ol>
+</li>
+</ul>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/L6_2_forcings.png"><img alt="../_images/L6_2_forcings.png" src="../_images/L6_2_forcings.png" style="width: 70%;" /></a>
+</figure>
+<ul class="simple">
+<li><p>As a simplification the global conveyor belt can be interpreted as the ACC with MOC branches reaching into the three main oceanic basins of the Atalntic, Pacific and Indian Ocean (see <a class="reference external" href="https://upload.wikimedia.org/wikipedia/commons/a/ab/Thermohaline_circulation.svg">https://upload.wikimedia.org/wikipedia/commons/a/ab/Thermohaline_circulation.svg</a> for a nice animation).</p></li>
+<li><p>The ACC is driven by strong westerlies all around the Antarctic continent (see the panel on the left side of Fig. 1).</p></li>
+</ul>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/L6_03_ACC.PNG"><img alt="../_images/L6_03_ACC.PNG" src="../_images/L6_03_ACC.PNG" style="width: 30%;" /></a>
+</figure>
+<ul class="simple">
+<li><p>Driving mechanisms: If there would be no mixing (turbulent diffusion generated by mechanical forcing - wind and tides) and no upwelling around Antarctica (due to Ekman transport) the ocean would be in the “cold death” steady state. In todays climate the MOC is thermally driven, rather han salt driven, as already previously mentioned. But the salinity explains hte difference between the MOC of the Atlantic (NA is saltier) and the Pacfific.</p></li>
+<li><p>Time scales: Currents in the abyssal ocean have chacteristic speeds of <span class="math notranslate nohighlight">\(\mathrm{1\frac{mm}{s}}\)</span>, so that it takes 300 years for a parcel from a high latitude source to move to the equator. If the surface conditions change, it will take several hundret years for the deep ocean to re-equilibrate.
+<em>Courtesy: G. Vallis</em></p></li>
+</ul>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/L6_04_MOC.PNG"><img alt="../_images/L6_04_MOC.PNG" src="../_images/L6_04_MOC.PNG" style="width: 30%;" /></a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/L6_05_MOC.PNG"><img alt="../_images/L6_05_MOC.PNG" src="../_images/L6_05_MOC.PNG" style="width: 30%;" /></a>
+</figure>
+</section>
+<section id="the-atlantic-meridional-overturning-circulation-amoc">
+<h2>The Atlantic Meridional Overturning Circulation (AMOC)<a class="headerlink" href="#the-atlantic-meridional-overturning-circulation-amoc" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Paleoclimate temperature series for Greenland:</p></li>
+</ul>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/L6_06_greenland.PNG"><img alt="../_images/L6_06_greenland.PNG" src="../_images/L6_06_greenland.PNG" style="width: 30%;" /></a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/L6_07_greenland.PNG"><img alt="../_images/L6_07_greenland.PNG" src="../_images/L6_07_greenland.PNG" style="width: 30%;" /></a>
+</figure>
+<ul class="simple">
+<li><p>Temperature series from the last ice age indicate strong and sudden changes, as seen for Greenland in Fig. 6 and 7. The most recent example is the Younger Dryas indicated in Fig. 7. The leading hypothesis to explain this massive drop in temperature reasons it with the AMOC being interrupted by a large influx of freshwater -&gt; the AMOC can have large impact on Northern Hemisphere climate!</p></li>
+<li><p>The AMOC can adopt different states depending on the oceanic ice cover, shown in Fig. 8. The bottom Earth (left) and circulation (right) depict a climate state as currently prevailing, with little ice cover. The AMOC is strong and transports warm surface water polewards, where the water releases its heat and forms deep water. The top Earth (left) and circulation sketch (right) show the AMOC for a largely ice-covered Northern Hemisphere. The circulation is weaker and reversed in its direction transporting water southward. In the middle an in between climate state is shown, you can see how the surface flow cannot propagate as far North anymore because the ocean is frozen there.</p></li>
+</ul>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/L6_08_AMOCstates.PNG"><img alt="../_images/L6_08_AMOCstates.PNG" src="../_images/L6_08_AMOCstates.PNG" style="width: 45%;" /></a>
+</figure>
+<ul class="simple">
+<li><p>Now the impulse of a climate physicist is to ask: How can I model the AMOC? Henry Stommel asked himself the same question and in 1961 he came up with his two-box model as an answer.</p></li>
+</ul>
+<section id="stommel-s-two-box-model">
+<h3>Stommel’s two-box model<a class="headerlink" href="#stommel-s-two-box-model" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Simplifying the AMOC: splitting the North Atlantic into two boxes by latitude, the subtropical box and the polar box. The exchange between the boxes is density and thus temperature and salinity driven.</p></li>
+</ul>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/L6_09_2box.PNG"><img alt="../_images/L6_09_2box.PNG" src="../_images/L6_09_2box.PNG" style="width: 30%;" /></a>
+</figure>
+<ul class="simple">
+<li><p>There is a strong meridional temperature gradient in the Atlantic Ocean, so the two boxes mark areas with distinctly different temperature profiles, as shown in Fig. 10. Intuitively the polar box in higher latitudes has a lower temprature than the subtropical box.</p></li>
+</ul>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/L6_10_2box_temp.PNG"><img alt="../_images/L6_10_2box_temp.PNG" src="../_images/L6_10_2box_temp.PNG" style="width: 40%;" /></a>
+</figure>
+<ul class="simple">
+<li><p>Lower latitudes accomodate higher salinities than higher latitudes in the North Atlantic, as shown in Fig. 11. This is due to a difference in evaporation, which is higher for the subtropical box, and a difference in freshwater supply, which is higher for the polar box where the ocean experiences more precipitation and river runoff.</p></li>
+</ul>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/L6_11_2box_salinity.PNG"><img alt="../_images/L6_11_2box_salinity.PNG" src="../_images/L6_11_2box_salinity.PNG" style="width: 40%;" /></a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/L6_12_netflux.PNG"><img alt="../_images/L6_12_netflux.PNG" src="../_images/L6_12_netflux.PNG" style="width: 40%;" /></a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/L6_13_netevap.PNG"><img alt="../_images/L6_13_netevap.PNG" src="../_images/L6_13_netevap.PNG" style="width: 40%;" /></a>
+</figure>
+<ul class="simple">
+<li><p>The model navigates the dynamics between a temperature and a salinity driven regime. They have opposite direction as shown in Fig. 14. We know that in our current climate state the temperature driven circulation dominates.</p></li>
+</ul>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/L6_14_2box.PNG"><img alt="../_images/L6_14_2box.PNG" src="../_images/L6_14_2box.PNG" style="width: 40%;" /></a>
+</figure>
+<ul class="simple">
+<li><p>The model includes temperature exchange with the atmosphere for the subtropical box and salinity exchange for the polar box. The salinity exchange yields from freshwater influx, which decreases the oceanic salinity. The two boxes are connected and exchange water through cannels on top and bottom in a water cycle. Due to continuity the net mass flow has to be zero, so for each gramm of water transported poleward on the surface one gramm of water flows back South at the bottom.</p></li>
+</ul>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/L6_15_sketch.PNG"><img alt="../_images/L6_15_sketch.PNG" src="../_images/L6_15_sketch.PNG" style="width: 50%;" /></a>
+</figure>
+<ul class="simple">
+<li><p>Let’s take a look at the governing equations of the system. Fig. 15 shows temperature <span class="math notranslate nohighlight">\(\mathrm{T}\)</span>, salinity <span class="math notranslate nohighlight">\(\mathrm{S}\)</span> and volume <span class="math notranslate nohighlight">\(\mathrm{V}\)</span> of the subtropical (index <span class="math notranslate nohighlight">\(\mathrm{s}\)</span>) and the polar (index <span class="math notranslate nohighlight">\(\mathrm{p}\)</span>) box. Index <span class="math notranslate nohighlight">\(\mathrm{a}\)</span> indicates the atmosphere which the two boxes are in exchange with. The flow is driven by a difference in density between the two boxes. The flow <span class="math notranslate nohighlight">\(\Psi\)</span> is positive if the surface flow is northwards.</p></li>
+</ul>
+<div class="math notranslate nohighlight" id="equation-flow">
+<span class="eqno">(19)<a class="headerlink" href="#equation-flow" title="Permalink to this equation">#</a></span>\[\Psi = \alpha (\rho_p - \rho_s).\]</div>
+<ul class="simple">
+<li><p>We assume the density of both boxes to be a linear function of temperature and salinity respectively.</p></li>
+</ul>
+<div class="math notranslate nohighlight" id="equation-rho">
+<span class="eqno">(20)<a class="headerlink" href="#equation-rho" title="Permalink to this equation">#</a></span>\[\rho = \rho_0(1-\beta_TT + \beta_SS)\]</div>
+<ul class="simple">
+<li><p>These assumptions yield the governing equations for temperature and salinity of the subtropical and the polar box <span class="math notranslate nohighlight">\(T_s\)</span>, <span class="math notranslate nohighlight">\(T_p\)</span>, <span class="math notranslate nohighlight">\(S_s\)</span> and <span class="math notranslate nohighlight">\(S_p\)</span> with coupling parameters <span class="math notranslate nohighlight">\(\lambda_T\)</span> and <span class="math notranslate nohighlight">\(\lambda_S\)</span> between atmosphere and ocean:</p></li>
+</ul>
+<div class="math notranslate nohighlight" id="equation-goveq">
+<span class="eqno">(21)<a class="headerlink" href="#equation-goveq" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{align*}
+\frac{dT_s}{dt} &amp;= |\Psi|(T_p-T_s) + \lambda_T(T_s^a-T_s)\\
+\frac{dT_p}{dt} &amp;= |\Psi|(T_s-T_p) + \lambda_T(T_p^a-T_p)\\
+\frac{dS_s}{dt} &amp;= |\Psi|(S_p-S_s) + \lambda_S(S_s^a-S_s)\\
+\frac{dS_p}{dt} &amp;= |\Psi|(S_s-S_p) + \lambda_S(S_p^a-S_p)
+\end{align*}\end{split}\]</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/L6_16_equilibria.png"><img alt="../_images/L6_16_equilibria.png" src="../_images/L6_16_equilibria.png" style="width: 40%;" /></a>
+</figure>
+<ul class="simple">
+<li><p>Taking <span class="xref myst"></span> and <span class="xref myst"></span> into account the system of differential equations <span class="xref myst"></span> can be solved. Under certain circumstances we can get a solution with three branches as shown in Fig. 16 - each branch represents are possible equilibrium. A positive dimensionless overturning rate means polewards surface flow, and a negative rate means surface flow towards the equator.</p></li>
+<li><p>At the current state of the climate system the AMOC state lays on the upper solid branch. A strong increase in salinity forcing (<span class="math notranslate nohighlight">\(F^* &gt; 0.25\)</span>) would cause the system to fall onto the lower branch which corresponds to a flippening of the circulation. The dashed line represents an unstable equilibrium: a small perturbation in the salinity forcing will get amplified and the system navigates to one of the two stable equilibria.</p></li>
+<li><p>This is more than just a thought experiment, because the AMOC is one of the global tipping points of Earth’s climate system. Due to climate change the meridional temperature gradient along the Atlantic Ocean decreases. Furthermore freshwater influxes into the North Atlantic due to melting glacier ice masses are effectively increasing the meridional salinity gradient. Both processes weaken the AMOC until… at some point we could eventually reach its tipping point.</p></li>
+</ul>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/L6_17_AMOC_shutdown.PNG"><img alt="../_images/L6_17_AMOC_shutdown.PNG" src="../_images/L6_17_AMOC_shutdown.PNG" style="width: 40%;" /></a>
+</figure>
+<ul class="simple">
+<li><p>Several climate models have computed the effects of an AMOC shutdown. Fig. 17 shows one result. A shutdown would lead to a drastical cooling of the whole Northern Hemisphere and especially of the Northern Atlantic - which is intuitive since the transport of warm surface waters to the North would stop.</p></li>
+</ul>
+<p><em>Courtesy: D. Dommenget</em></p>
+</section>
+</section>
+<section id="table-of-figures">
+<h2>Table of figures<a class="headerlink" href="#table-of-figures" title="Permalink to this heading">#</a></h2>
+<p>Figure 1: Left: Figure 2.3 in Vallis, Geoffrey K.. Climate and the Oceans. Princeton University Press, 2012. Right: Figure <span style="color:red;">???</span> in Vallis, Geoffrey K.. Climate and the Oceans. Princeton University Press, 2012.<br />
+Figure 2: Left: Copyright UCAR Center for Science Education. <a class="reference external" href="https://scied.ucar.edu/learning-zone/how-weather-works/global-air-atmospheric-circulation">https://scied.ucar.edu/learning-zone/how-weather-works/global-air-atmospheric-circulation</a>. Right: Copyright M. Pidwirny, 2006. <a class="reference external" href="http://www.physicalgeography.net">www.physicalgeography.net</a>.<br />
+Figure 3: Figure <span style="color:red;">???</span> in Vallis, Geoffrey K.. Climate and the Oceans. Princeton University Press, 2012.<br />
+Figure 4: Figure 4.6 in Vallis, Geoffrey K.. Climate and the Oceans. Princeton University Press, 2012.<br />
+Figure 5: Figure 4.8 in Vallis, Geoffrey K.. Climate and the Oceans. Princeton University Press, 2012.<br />
+Figure 6: Figure 6.111 in the lecture notes of Dietmar Dommenget: An Introduction to Climate Dynamics, <a class="reference external" href="https://users.monash.edu.au/~dietmard/teaching/dommenget.climate.dynamics.lecture.notes.pdf">https://users.monash.edu.au/~dietmard/teaching/dommenget.climate.dynamics.lecture.notes.pdf</a><br />
+Figure 7: Figure 6.112 in the lecture notes of Dietmar Dommenget: An Introduction to Climate Dynamics, <a class="reference external" href="https://users.monash.edu.au/~dietmard/teaching/dommenget.climate.dynamics.lecture.notes.pdf">https://users.monash.edu.au/~dietmard/teaching/dommenget.climate.dynamics.lecture.notes.pdf</a><br />
+Figure 8: Figure 6.113 in the lecture notes of Dietmar Dommenget: An Introduction to Climate Dynamics, <a class="reference external" href="https://users.monash.edu.au/~dietmard/teaching/dommenget.climate.dynamics.lecture.notes.pdf">https://users.monash.edu.au/~dietmard/teaching/dommenget.climate.dynamics.lecture.notes.pdf</a><br />
+Figure 9: Figure 6.115 in the lecture notes of Dietmar Dommenget: An Introduction to Climate Dynamics, <a class="reference external" href="https://users.monash.edu.au/~dietmard/teaching/dommenget.climate.dynamics.lecture.notes.pdf">https://users.monash.edu.au/~dietmard/teaching/dommenget.climate.dynamics.lecture.notes.pdf</a><br />
+Figure 10: Figure 6.116 in the lecture notes of Dietmar Dommenget: An Introduction to Climate Dynamics, <a class="reference external" href="https://users.monash.edu.au/~dietmard/teaching/dommenget.climate.dynamics.lecture.notes.pdf">https://users.monash.edu.au/~dietmard/teaching/dommenget.climate.dynamics.lecture.notes.pdf</a><br />
+Figure 11: Figure 6.117 in the lecture notes of Dietmar Dommenget: An Introduction to Climate Dynamics, <a class="reference external" href="https://users.monash.edu.au/~dietmard/teaching/dommenget.climate.dynamics.lecture.notes.pdf">https://users.monash.edu.au/~dietmard/teaching/dommenget.climate.dynamics.lecture.notes.pdf</a><br />
+Figure 12: Figure 6.118 in the lecture notes of Dietmar Dommenget: An Introduction to Climate Dynamics, <a class="reference external" href="https://users.monash.edu.au/~dietmard/teaching/dommenget.climate.dynamics.lecture.notes.pdf">https://users.monash.edu.au/~dietmard/teaching/dommenget.climate.dynamics.lecture.notes.pdf</a><br />
+Figure 13: Figure 6.119 in the lecture notes of Dietmar Dommenget: An Introduction to Climate Dynamics, <a class="reference external" href="https://users.monash.edu.au/~dietmard/teaching/dommenget.climate.dynamics.lecture.notes.pdf">https://users.monash.edu.au/~dietmard/teaching/dommenget.climate.dynamics.lecture.notes.pdf</a><br />
+Figure 14: Figure 6.120 in the lecture notes of Dietmar Dommenget: An Introduction to Climate Dynamics, <a class="reference external" href="https://users.monash.edu.au/~dietmard/teaching/dommenget.climate.dynamics.lecture.notes.pdf">https://users.monash.edu.au/~dietmard/teaching/dommenget.climate.dynamics.lecture.notes.pdf</a><br />
+Figure 16: By Deniseruijsch - Own work, CC BY-SA 4.0, <a class="reference external" href="https://commons.wikimedia.org/w/index.php?curid=105284780">https://commons.wikimedia.org/w/index.php?curid=105284780</a><br />
+Figure 17: Figure 6.128 in the lecture notes of Dietmar Dommenget: An Introduction to Climate Dynamics, <a class="reference external" href="https://users.monash.edu.au/~dietmard/teaching/dommenget.climate.dynamics.lecture.notes.pdf">https://users.monash.edu.au/~dietmard/teaching/dommenget.climate.dynamics.lecture.notes.pdf</a></p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./lecture"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="03_Large_scale_atmospheric_and_ocean_circulation.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Large-scale atmosphere and ocean circulations</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="07_Climate_models.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Climate models</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-makes-the-ocean-circulate-in-the-way-it-does">What makes the ocean circulate in the way it does?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-atlantic-meridional-overturning-circulation-amoc">The Atlantic Meridional Overturning Circulation (AMOC)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stommel-s-two-box-model">Stommel’s two-box model</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#table-of-figures">Table of figures</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By H. E. Markus Meier, Florian Börgel, Sven Karsten, Georg Sebastian Völker
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=c5ced968eda925caa686"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

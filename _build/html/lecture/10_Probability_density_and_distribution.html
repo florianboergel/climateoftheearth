@@ -1,0 +1,929 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Probability density and distribution &#8212; Climate of the Earth</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=c5ced968eda925caa686" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=c5ced968eda925caa686" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=c5ced968eda925caa686"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'lecture/10_Probability_density_and_distribution';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Covariance Matrix" href="11_Covariance_matrix.html" />
+    <link rel="prev" title="Probability basics" href="09_Probability_basics.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Climate of the Earth</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    Lecture overview
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Climate dynamics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="01_Introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_Fundamental_process_of_the_climate_system.html">Fundamental processes of the climate system</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_Large_scale_atmospheric_and_ocean_circulation.html">Large-scale atmosphere and ocean circulations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_Buoyancy-driven_circulation.html">Buoyancy-driven circulation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07_Climate_models.html">Climate models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08_Forced_and_unforced_climate_variability.html">Forced and unforced climate variability</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Climate statistics</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="09_Probability_basics.html">Probability basics</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Probability density and distribution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11_Covariance_matrix.html">Covariance Matrix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_Estimation_of_statistical_parameters.html">Estimation of statistical parameters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="13_Time_series_analysis.html">Time series analysis - basic definitions and examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14_Stochastic_climate_models.html">Stochastic climate models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="15_Auto-covariance_function.html">Auto-covariance function</a></li>
+<li class="toctree-l1"><a class="reference internal" href="16_Spectrum.html">Spectrum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="17_Cross-covariance_function.html">Cross-covariance function</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Exercise</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../exercise/00_introduction_to_python.html">Lecture 1, Introduction to python</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="../exercise/01_energy-model.html">Lecture 2, A “zero-dimensional” energy balance model of Earth’s climate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exercise/02_non-linear-dynamics.html">Lecture 3, Nonlinear dynamics, stability and bifurcations</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../exercise/03_ice-albedo.html">Lecture 4, Snowball Earth, the ice-albedo feedback, and multiple equilibria</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="../exercise/04_advection-diffusion.html">Lecture 5, Evolution in time and space</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Homework</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../homework/climate-of-the-earth-h1.html">Exercise 1, policy goals under uncertainty</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../homework/climate-of-the-earth-h2.html">Exercise 2, melting the snowball earth</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../homework/climate-of-the-earth-h3.html">Exercise 3, analyzing the Baltic Sea</a></li>
+
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Additional material</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../additional/06_rednoise.html">Red noise</a></li>
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/git/https%3A//git.io-warnemuende.de/iow-lectures/climateoftheearth/main?urlpath=tree/lecture/10_Probability_density_and_distribution.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/iow-lectures/climateoftheearth/blob/main/lecture/10_Probability_density_and_distribution.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+<a href="https://git.io-warnemuende.de/iow-lectures/climateoftheearth/issues/new?title=Issue%20on%20page%20%2Flecture/10_Probability_density_and_distribution.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button"
+   title="Open an issue"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/lecture/10_Probability_density_and_distribution.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Probability density and distribution</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probability-density-function-and-important-parameters">Probability density function and important parameters</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#probability-density-function">Probability density function</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cumulative-distribution-function">Cumulative distribution function</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expectation-varepsilon">Expectation <span class="math notranslate nohighlight">\(\varepsilon\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#central-moments-mu">Central moments <span class="math notranslate nohighlight">\(\mu\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#skewness-gamma-1">Skewness <span class="math notranslate nohighlight">\(\gamma_1\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kurtosis-gamma-2">Kurtosis <span class="math notranslate nohighlight">\(\gamma_2\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">Examples</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#p-quantiles">P-quantiles</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#different-probability-distributions">Different probability distributions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uniform-distribution">Uniform distribution</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#normal-gaussian-distribution">Normal (Gaussian) distribution</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#log-normal-distribution">Log-normal distribution</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chi-2-distribution"><span class="math notranslate nohighlight">\(\chi^2\)</span>-distribution</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#student-s-t-distribution">Student’s t-distribution</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fisher-f-distribution">Fisher-F-distribution</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-of-theoretical-distributions">Summary of theoretical distributions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#continous-random-vectors-multi-variate-data">Continous random vectors, multi-variate data</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <div style="background-color: #f0f0f0; border: 1px solid #ccc; padding: 10px; color: black;">
+    <strong>Climate of the Earth system</strong>
+    <p> Prof. Dr. Markus Meier <br>
+    Leibniz Institute for Baltic Sea Research Warnemünde (IOW) <br>
+    E-Mail: markus.meier@io-warnemuende.de </p>
+</div><section class="tex2jax_ignore mathjax_ignore" id="probability-density-and-distribution">
+<h1>Probability density and distribution<a class="headerlink" href="#probability-density-and-distribution" title="Permalink to this heading">#</a></h1>
+<ol class="arabic simple">
+<li><p>Probability density function and important parameters</p></li>
+<li><p>Different probability distributions</p></li>
+</ol>
+<section id="probability-density-function-and-important-parameters">
+<h2>Probability density function and important parameters<a class="headerlink" href="#probability-density-function-and-important-parameters" title="Permalink to this heading">#</a></h2>
+<section id="probability-density-function">
+<h3>Probability density function<a class="headerlink" href="#probability-density-function" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>let <span class="math notranslate nohighlight">\(x\)</span> be a continous (not discrete!) variable that takes values in <span class="math notranslate nohighlight">\(\Omega\)</span>, for example temperature, probability density function <span class="math notranslate nohighlight">\(f_X(x)\)</span> of an event X (i.e. T=10°C) is defined as a continous function on <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> with the following three attributes:</p></li>
+</ul>
+<div class="math notranslate nohighlight" id="equation-pdf">
+<span class="eqno">(24)<a class="headerlink" href="#equation-pdf" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{align*}
+&amp;1.~~~f_X(x) \geq 0~~\textrm{for all}~~ x \epsilon \Omega,\\
+&amp;2.~~~\int_{\Omega}f_X(x)~dx = 1,\\
+&amp;3.~~~P(X\epsilon (a,b)) = \int_a^bf_X(x)~dx ~~\textrm{for all}~~ (a,b) \subset \Omega
+\end{align*}\end{split}\]</div>
+<ul class="simple">
+<li><p>Question: What is the unit of the pdf?<br />
+Answer: [<span class="math notranslate nohighlight">\(f_X(x)\)</span>] = [x]<span class="math notranslate nohighlight">\(^{-1}\)</span>.</p></li>
+<li><p>Question: What is the integral of the pdf?
+Answer: The cumulative distribution function.</p></li>
+</ul>
+</section>
+<section id="cumulative-distribution-function">
+<h3>Cumulative distribution function<a class="headerlink" href="#cumulative-distribution-function" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Cumulative distribution function for an event X is a montonously increasing, non-dimensional function F_X(x) on <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> defined as:</p></li>
+</ul>
+<div class="math notranslate nohighlight" id="equation-cdf1">
+<span class="eqno">(25)<a class="headerlink" href="#equation-cdf1" title="Permalink to this equation">#</a></span>\[F_X(x) = \int_{-\infty}^x f_(r)~dr,\]</div>
+<ul class="simple">
+<li><p>which is equivalent to:</p></li>
+</ul>
+<div class="math notranslate nohighlight" id="equation-cdf2">
+<span class="eqno">(26)<a class="headerlink" href="#equation-cdf2" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{align*}
+&amp; \lim_{x \to -\infty} F_X(x) = 0\\
+&amp; \lim_{x \to \infty} F_X(x) = 1\\
+&amp; \frac{d}{dx}F_X(x) = f_X(x)
+\end{align*}\end{split}\]</div>
+<ul class="simple">
+<li><p>consequently the probability of the event <span class="math notranslate nohighlight">\(X\)</span> to be inside the range of <span class="math notranslate nohighlight">\((a,b)\)</span> is:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[P(X \epsilon (a,b)) = F_X(b) - F_X(a)\]</div>
+</section>
+<section id="expectation-varepsilon">
+<h3>Expectation <span class="math notranslate nohighlight">\(\varepsilon\)</span><a class="headerlink" href="#expectation-varepsilon" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>the expectation of a given pdf weighs is with <span class="math notranslate nohighlight">\(x\)</span> in the integral:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+\varepsilon(X) &amp;= \int_{\Omega}xf_X(x)~dx\\
+\varepsilon(g(X)) &amp;= \int_{\Omega}g(x)f_X(x)~dx
+\end{align*}\end{split}\]</div>
+<ul class="simple">
+<li><p>two attributes of the expectation are:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+\varepsilon(g_1(X) + g_2(X)) &amp;= \varepsilon(g_1(X)) + \varepsilon(g_2(X))\\
+\varepsilon(ag(X)+b) &amp;= a\varepsilon(g(X)) + b
+\end{align*}\end{split}\]</div>
+</section>
+<section id="central-moments-mu">
+<h3>Central moments <span class="math notranslate nohighlight">\(\mu\)</span><a class="headerlink" href="#central-moments-mu" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>k-th moment of a continous random variable X:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\mu^{(k)} = \varepsilon(x^k) = \int_{\Omega}x^kf(x)~dx\]</div>
+<ul class="simple">
+<li><p>k-th central moment of a continous random variable X:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\mu^{'(k)} = \int_{\Omega}(x-\mu)^kf(x)~dx\]</div>
+<ul class="simple">
+<li><p>example: anomalies with <span class="math notranslate nohighlight">\(\mu\)</span> mean seasonal cycle</p></li>
+<li><p>mean <span class="math notranslate nohighlight">\(\mu\)</span>: location parameter <span class="math notranslate nohighlight">\(\mu = \mu^{(1)}\)</span></p></li>
+<li><p>variance:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[Var(X) = \mu^{'(2)} = \int_{\Omega}(x-\mu)^2f(x)~dx\]</div>
+<ul class="simple">
+<li><p>standard deviation:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\sigma_X = \sqrt{Var(X)}\]</div>
+<ul class="simple">
+<li><p>Chebyshev’s inequality:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[P(|X-\mu| \geq \lambda \sigma) \leq \frac{1}{\lambda^2}\]</div>
+</section>
+<section id="skewness-gamma-1">
+<h3>Skewness <span class="math notranslate nohighlight">\(\gamma_1\)</span><a class="headerlink" href="#skewness-gamma-1" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>is a measure of the asymmetry of a distribution: symmetric for <span class="math notranslate nohighlight">\(\gamma_1=0\)</span>, scaled version of the third central moment, non-dimensional shape parameter</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\gamma_1 = \int_{\Omega}\left( \frac{x-\mu}{\sigma} \right)^3f_X(x)~dx\]</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/L10_1_skewness.PNG"><img alt="../_images/L10_1_skewness.PNG" src="../_images/L10_1_skewness.PNG" style="width: 30%;" /></a>
+</figure>
+</section>
+<section id="kurtosis-gamma-2">
+<h3>Kurtosis <span class="math notranslate nohighlight">\(\gamma_2\)</span><a class="headerlink" href="#kurtosis-gamma-2" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>is a measure of the peakedness of a distribution: a normal distribution (will be explained later this lecture) has <span class="math notranslate nohighlight">\(\gamma_2=0\)</span>, scaled and shifted version of the fourth central moment, non-dimensional shape parameter</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\gamma_2 = \int_{-\infty}^{\infty} \left( \frac{x-\mu}{\sigma} \right)^4f_X(x)~dx -3\]</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/L10_2_kurtosis.PNG"><img alt="../_images/L10_2_kurtosis.PNG" src="../_images/L10_2_kurtosis.PNG" style="width: 70%;" /></a>
+</figure>
+</section>
+<section id="examples">
+<h3>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>summer sea level at Kieler Förde, <span class="math notranslate nohighlight">\(\mu = 0.06\)</span>, <span class="math notranslate nohighlight">\(\sigma=0.19\)</span>, <span class="math notranslate nohighlight">\(\gamma_1=-0.6\)</span>, <span class="math notranslate nohighlight">\(\gamma_2=4.07\)</span></p></li>
+</ul>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/L10_3_example.PNG"><img alt="../_images/L10_3_example.PNG" src="../_images/L10_3_example.PNG" style="width: 30%;" /></a>
+</figure>
+<ul class="simple">
+<li><p>probability densities of some measured variables</p></li>
+</ul>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/L10_4_example.PNG"><img alt="../_images/L10_4_example.PNG" src="../_images/L10_4_example.PNG" style="width: 50%;" /></a>
+</figure>
+</section>
+<section id="p-quantiles">
+<h3>P-quantiles<a class="headerlink" href="#p-quantiles" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>mean and variance are affected by the tail ends of the pdf (likelihood of extreme values), but p-quantiles <span class="math notranslate nohighlight">\(x_p\)</span> are insensitive to extreme values.</p></li>
+<li><p>p quantile of 0.3 means that 30% of the x values are below this threshold</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+F_X(x_p) = p ~~~~~\textrm{with}~~~~~ &amp;P(X \varepsilon (-\infty,x_p)) = p,\\
+&amp;P(X \varepsilon (x_p, \infty)) = 1-p
+\end{align*}\end{split}\]</div>
+<ul class="simple">
+<li><p>median m<span class="math notranslate nohighlight">\(_{50}\)</span> is the 50%-quantile: half of the distribution lays above and the other half below m<span class="math notranslate nohighlight">\(_{50}\)</span>.</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[F_X(m_{50}) = 0.5 ~~~\rightarrow~~~ P(x\leq m_{50}) = P(x\geq m_{50}) = 0.5\]</div>
+<ul class="simple">
+<li><p>let’s look at the p-quantiles of the log-normal distribution in Figure 5 to get an idea. note the difference of mean and median!</p></li>
+</ul>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/L10_5_lognormal.PNG"><img alt="../_images/L10_5_lognormal.PNG" src="../_images/L10_5_lognormal.PNG" style="width: 30%;" /></a>
+</figure>
+</section>
+</section>
+<section id="different-probability-distributions">
+<h2>Different probability distributions<a class="headerlink" href="#different-probability-distributions" title="Permalink to this heading">#</a></h2>
+<section id="uniform-distribution">
+<h3>Uniform distribution<a class="headerlink" href="#uniform-distribution" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>symmetric and less peaked than the normal distribution:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}f_X(x) = \cal U(a,b) = \left\{
+\begin{array}{ll}
+    1/(b-a) ~~~\textrm{for all}~ x\epsilon [a,b]\\
+    0~~~~~~~~~~~~~~~~~ \textrm{elsewhere}\\
+\end{array} \right.\end{split}\]</div>
+<ul class="simple">
+<li><p>with the cumulative distribution function:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}F_X(x) = \left\{
+\begin{array}{ll}
+    0~~~~~~~~~~~~~~~~~~~~~~~~~~ \textrm{ for}~x \leq a\\
+    (x-a)/(b-a) ~~~\textrm{for all}~ x\epsilon [a,b]\\
+    1~~~~~~~~~~~~~~~~~~~~~~~~~~ \textrm{ for}~x \geq a\\    
+\end{array} \right.\end{split}\]</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/L10_6_uniform.PNG"><img alt="../_images/L10_6_uniform.PNG" src="../_images/L10_6_uniform.PNG" style="width: 30%;" /></a>
+</figure>
+<ul class="simple">
+<li><p>exercise: calculate <span class="math notranslate nohighlight">\(\mu,Var,\sigma,\gamma_1,\gamma_2\)</span> of the uniform distribution <span class="math notranslate nohighlight">\(\cal U(a,b)\)</span><br />
+solutions: <span class="math notranslate nohighlight">\(\mu(\cal U(a,b))= \frac{1}{2}(a+b)\)</span>, <span class="math notranslate nohighlight">\(Var(\cal U(a,b))= \frac{1}{12}(b-a)^2\)</span>, <span class="math notranslate nohighlight">\(\sigma(\cal U(a,b))= \sqrt{\frac{1}{12}}(b-a)\)</span>, <span class="math notranslate nohighlight">\(\gamma_1(\cal U(a,b))= 0\)</span>, <span class="math notranslate nohighlight">\(\gamma_2(\cal U(a,b))= -1.2\)</span></p></li>
+</ul>
+</section>
+<section id="normal-gaussian-distribution">
+<h3>Normal (Gaussian) distribution<a class="headerlink" href="#normal-gaussian-distribution" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>most physical quantities are nearly normal distributed</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[f_{\cal N}(x) = \frac{1}{\sqrt{2\pi}\sigma}e^{\frac{-(x-\mu)^2}{2\sigma^2}} ~~~\textrm{with}~~~ X \sim \cal N(\mu,\sigma^2)\]</div>
+<ul class="simple">
+<li><p>no skewness or kurtosis: <span class="math notranslate nohighlight">\(\gamma_1=\gamma_2=0\)</span></p></li>
+<li><p>no analytical form of cdf, approximation:</p></li>
+</ul>
+<div class="math notranslate nohighlight" id="equation-gausscdf">
+<span class="eqno">(27)<a class="headerlink" href="#equation-gausscdf" title="Permalink to this equation">#</a></span>\[F_{\cal N}(x) \approx \frac{1}{2} \left( 1+sign\left( \frac{x-\mu}{\sigma} \right) \sqrt{1-e^{\frac{-2}{\pi} \left(\frac{x-\mu}{\sigma} \right)^2 }} \right)\]</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/L10_7_gauss.PNG"><img alt="../_images/L10_7_gauss.PNG" src="../_images/L10_7_gauss.PNG" style="width: 60%;" /></a>
+</figure>
+<ul class="simple">
+<li><p>central limit theorem states: If <span class="math notranslate nohighlight">\(X_k,k=1,2,...\)</span> is an infinite series of independent and identically distributed random variables with <span class="math notranslate nohighlight">\(\varepsilon(X_k)=\mu\)</span> and <span class="math notranslate nohighlight">\(Var(X_k)=\sigma^2\)</span> then the average <span class="math notranslate nohighlight">\(\frac{1}{n} \sum^n_{k=1}X_k\)</span> is asymptotically normal distributed. That is:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\lim_{n \to \infty} \frac{\frac{1}{n} \sum^n_{k=1}(X_k-\mu)}{\frac{\sigma}{\sqrt{n}}} \sim \cal N(0,1)\]</div>
+<ul class="simple">
+<li><p>a larger sample size reduces the standard deviation as of:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\lim_{n \to \infty} \frac{1}{n} \sum^n_{k=1}(X_k-\mu) \sim \cal N(0,\frac{\sigma^2}{n}) ~~\Rightarrow ~~ \sigma_{\Sigma}= \frac{\sigma}{\sqrt{n}}\]</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/L10_8_clt1.PNG"><img alt="../_images/L10_8_clt1.PNG" src="../_images/L10_8_clt1.PNG" style="width: 60%;" /></a>
+</figure>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/L10_9_clt2.PNG"><img alt="../_images/L10_9_clt2.PNG" src="../_images/L10_9_clt2.PNG" style="width: 60%;" /></a>
+</figure>
+</section>
+<section id="log-normal-distribution">
+<h3>Log-normal distribution<a class="headerlink" href="#log-normal-distribution" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>distribution of positive definite quantities such as rainfall, wind speed</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[f_X(x) = \frac{1}{\sigma\sqrt{2\pi}} \frac{1}{x} e^{\frac{-(ln(x)-ln(\theta))^2}{2\sigma^2}} ~~\textrm{for}~~ x&gt;0\]</div>
+<ul class="simple">
+<li><p>with the median value <span class="math notranslate nohighlight">\(\theta\)</span> and</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[ln(X) \sim \cal N(ln(\theta),\sigma)\]</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/L10_10_lognormal.PNG"><img alt="../_images/L10_10_lognormal.PNG" src="../_images/L10_10_lognormal.PNG" style="width: 30%;" /></a>
+</figure>
+<ul class="simple">
+<li><p>exercise: derive a general for the k-th central moment of the distribution<br />
+solution: <span class="math notranslate nohighlight">\(\varepsilon(X^k) = \theta^ke^{{k\sigma}^2/2}\)</span></p></li>
+</ul>
+</section>
+<section id="chi-2-distribution">
+<h3><span class="math notranslate nohighlight">\(\chi^2\)</span>-distribution<a class="headerlink" href="#chi-2-distribution" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>sum of k independent squared <span class="math notranslate nohighlight">\(\cal N(0,1)\)</span> random variables, k number of degrees of freedom, application for the pdfs of variance estimates:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[f_{\chi}(x) = \frac{x^{(k-2)/2}e^{-x/2}}{\Gamma(k/2)2^{k/2}} ~~\textrm{if}~~ x&gt;0
+\]</div>
+<ul class="simple">
+<li><p>with</p></li>
+</ul>
+<div class="math notranslate nohighlight" id="equation-gamma">
+<span class="eqno">(28)<a class="headerlink" href="#equation-gamma" title="Permalink to this equation">#</a></span>\[\Gamma(x) = \int_0^{\infty}e^{-t}t{x-1}dt ~\textrm{for}~x&gt;0\]</div>
+<ul class="simple">
+<li><p>it has handy attributes:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align*}
+\varepsilon(X) &amp;=k\\
+Var(X) &amp;=2k
+\end{align*}\end{split}\]</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/L10_11_chisquared.PNG"><img alt="../_images/L10_11_chisquared.PNG" src="../_images/L10_11_chisquared.PNG" style="width: 60%;" /></a>
+</figure>
+</section>
+<section id="student-s-t-distribution">
+<h3>Student’s t-distribution<a class="headerlink" href="#student-s-t-distribution" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>application for testing the significance of the differences in the means. be <span class="math notranslate nohighlight">\(t(k)\)</span> a test variable with <span class="math notranslate nohighlight">\(k&gt;0\)</span>, if A and B are independent random variables such that</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[B \sim \chi^2(k) ~\textrm{and} ~A \sim \cal {N(0,1)}\]</div>
+<ul class="simple">
+<li><p>the t-distribution can be written as:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[t(k) \sim \frac{A}{\sqrt{B/k}}\]</div>
+<ul class="simple">
+<li><p>using the <span class="math notranslate nohighlight">\(\Gamma\)</span>-function <span class="xref myst"></span> the distribution can also be written as:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[F_{\cal T}(t) = \frac{\Gamma((k+1)/2)}{\sqrt{k\pi}\Gamma(k/2)} \left( 1+\frac{t^2}{k} \right)^{\frac{-(k+1)}{2}}\]</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/L10_12_t.PNG"><img alt="../_images/L10_12_t.PNG" src="../_images/L10_12_t.PNG" style="width: 60%;" /></a>
+</figure>
+<ul class="simple">
+<li><p>t-test?</p></li>
+</ul>
+</section>
+<section id="fisher-f-distribution">
+<h3>Fisher-F-distribution<a class="headerlink" href="#fisher-f-distribution" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>application for testing the significance of the differences in the variance. for <span class="math notranslate nohighlight">\(\chi^2\)</span>-distributed <span class="math notranslate nohighlight">\(K\)</span> and <span class="math notranslate nohighlight">\(L\)</span>:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[K \sim \chi^2(k) ~\textrm{and}~ L \sim\chi^2(l)\]</div>
+<ul class="simple">
+<li><p>the F-distribution is given by:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[{\cal F}(k,l) = \frac{K/k}{L/l}\]</div>
+<ul class="simple">
+<li><p>alternatively the probsbility density of the F-distribution is also given by:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[f_{\cal F}(x) = \frac{(k/l)^{k/2}\Gamma((k+l)/2)}{\Gamma(k/2)\Gamma(l/2)} x^{(k-2)/2} \left(1+\frac{k}{l}x\right)^{-(k+l)}\]</div>
+</section>
+<section id="summary-of-theoretical-distributions">
+<h3>Summary of theoretical distributions<a class="headerlink" href="#summary-of-theoretical-distributions" title="Permalink to this heading">#</a></h3>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/L10_13_summary.PNG"><img alt="../_images/L10_13_summary.PNG" src="../_images/L10_13_summary.PNG" style="width: 70%;" /></a>
+</figure>
+</section>
+<section id="continous-random-vectors-multi-variate-data">
+<h3>Continous random vectors, multi-variate data<a class="headerlink" href="#continous-random-vectors-multi-variate-data" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>example: vectors <strong>X</strong> temperature and <strong>Y</strong> sea level pressure:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\mathbf{X}~\textrm{and}~\mathbf{Y} \sim f_{\mathbf{X},\mathbf{Y}}(\vec{x},\vec{y})\]</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/L10_14_correlation.PNG"><img alt="../_images/L10_14_correlation.PNG" src="../_images/L10_14_correlation.PNG" style="width: 70%;" /></a>
+</figure>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./lecture"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="09_Probability_basics.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Probability basics</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="11_Covariance_matrix.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Covariance Matrix</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#probability-density-function-and-important-parameters">Probability density function and important parameters</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#probability-density-function">Probability density function</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cumulative-distribution-function">Cumulative distribution function</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expectation-varepsilon">Expectation <span class="math notranslate nohighlight">\(\varepsilon\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#central-moments-mu">Central moments <span class="math notranslate nohighlight">\(\mu\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#skewness-gamma-1">Skewness <span class="math notranslate nohighlight">\(\gamma_1\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#kurtosis-gamma-2">Kurtosis <span class="math notranslate nohighlight">\(\gamma_2\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">Examples</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#p-quantiles">P-quantiles</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#different-probability-distributions">Different probability distributions</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#uniform-distribution">Uniform distribution</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#normal-gaussian-distribution">Normal (Gaussian) distribution</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#log-normal-distribution">Log-normal distribution</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#chi-2-distribution"><span class="math notranslate nohighlight">\(\chi^2\)</span>-distribution</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#student-s-t-distribution">Student’s t-distribution</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fisher-f-distribution">Fisher-F-distribution</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-of-theoretical-distributions">Summary of theoretical distributions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#continous-random-vectors-multi-variate-data">Continous random vectors, multi-variate data</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By H. E. Markus Meier, Florian Börgel, Sven Karsten, Georg Sebastian Völker
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=c5ced968eda925caa686"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=c5ced968eda925caa686"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
